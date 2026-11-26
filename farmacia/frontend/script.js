@@ -23,3 +23,10 @@ botones.forEach((boton) => {
         boton.classList.add("activo");
     });
 });
+
+const botonMenu = document.getElementById("botonMenu");
+const menuLateral = document.querySelector(".menu-lateral");
+
+botonMenu.addEventListener("click", () => {
+    menuLateral.classList.toggle("contraido");
+});
