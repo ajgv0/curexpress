@@ -247,3 +247,55 @@ body {
 .menu-lateral.contraido .logo img {
     width: 45px;
 }
+
+
+/* MODO OSCURO */
+
+body.modo-oscuro {
+    background-color: #171b19;
+    color: #f1f1f1;
+}
+
+body.modo-oscuro .contenido {
+    background-color: #171b19;
+}
+
+body.modo-oscuro .barra-superior {
+    background-color: #222925;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.modo-oscuro .barra-superior input {
+    background-color: #303a34;
+    color: white;
+    border-color: #46534a;
+}
+
+body.modo-oscuro .barra-superior input::placeholder {
+    color: #bbb;
+}
+
+body.modo-oscuro .acciones-header button {
+    color: white;
+}
+
+body.modo-oscuro .producto {
+    background-color: #222925;
+    border-color: #39453e;
+}
+
+body.modo-oscuro .producto h3 {
+    color: white;
+}
+
+body.modo-oscuro .producto p {
+    color: #55c58a;
+}
+
+body.modo-oscuro .vista > p {
+    color: #bbb;
+}
+
+body.modo-oscuro .vista h2 {
+    color: white;
+}
