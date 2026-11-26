@@ -65,6 +65,7 @@ botonTema.addEventListener("click", () => {
 const traducciones = {
     es: {
         menuPrincipal: "MENÚ PRINCIPAL",
+        nombre: "CureXpress",
         inicio: "Inicio",
         productos: "Productos",
         carrito: "Carrito",
@@ -109,6 +110,7 @@ const traducciones = {
 
     en: {
         menuPrincipal: "MAIN MENU",
+        nombre: "CureXpress",
         inicio: "Home",
         productos: "Products",
         carrito: "Cart",
