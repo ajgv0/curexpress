@@ -1,0 +1,301 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f6;
+    color: #333;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENÚ LATERAL */
+
+.menu-lateral {
+    width: 240px;
+    min-width: 240px;
+    background-color: #198754;
+    color: white;
+    padding: 20px 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 55px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.menu-titulo {
+    font-size: 11px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin: 25px 10px 10px;
+}
+
+.nav-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav-btn:hover,
+.nav-btn.activo {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* CONTENIDO */
+
+.contenido {
+    flex: 1;
+    min-width: 0;
+}
+
+/* BARRA SUPERIOR */
+
+.barra-superior {
+    height: 75px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.barra-superior input {
+    width: 350px;
+    max-width: 60%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.acciones-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.acciones-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.acciones-header img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* PANTALLAS */
+
+.contenido-principal {
+    padding: 35px;
+}
+
+.vista {
+    display: none;
+}
+
+.vista.activa {
+    display: block;
+}
+
+.vista h1 {
+    color: #198754;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.vista > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.vista h2 {
+    margin: 30px 0 20px;
+}
+
+/* PRODUCTOS */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.producto {
+    width: 210px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.producto h3 {
+    margin: 12px 0 8px;
+}
+
+.producto p {
+    color: #198754;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.producto button {
+    width: 100%;
+    padding: 10px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #146c43;
+}
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 750px) {
+    .menu-lateral {
+        width: 180px;
+        min-width: 180px;
+        padding: 15px 8px;
+    }
+
+    .contenido-principal {
+        padding: 20px;
+    }
+
+    .barra-superior {
+        padding: 0 15px;
+    }
+}
+
+/* BOTÓN DEL MENÚ */
+
+.boton-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* MENÚ CONTRAÍDO */
+
+.menu-lateral {
+    position: relative;
+    transition: width 0.3s ease, min-width 0.3s ease;
+}
+
+.menu-lateral.contraido {
+    width: 75px;
+    min-width: 75px;
+}
+
+.menu-lateral.contraido .logo h2,
+.menu-lateral.contraido .menu-titulo,
+.menu-lateral.contraido .nav-btn {
+    display: none;
+}
+
+.menu-lateral.contraido .logo {
+    justify-content: center;
+}
+
+.menu-lateral.contraido .logo img {
+    width: 45px;
+}
+
+
+/* MODO OSCURO */
+
+body.modo-oscuro {
+    background-color: #171b19;
+    color: #f1f1f1;
+}
+
+body.modo-oscuro .contenido {
+    background-color: #171b19;
+}
+
+body.modo-oscuro .barra-superior {
+    background-color: #222925;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.modo-oscuro .barra-superior input {
+    background-color: #303a34;
+    color: white;
+    border-color: #46534a;
+}
+
+body.modo-oscuro .barra-superior input::placeholder {
+    color: #bbb;
+}
+
+body.modo-oscuro .acciones-header button {
+    color: white;
+}
+
+body.modo-oscuro .producto {
+    background-color: #222925;
+    border-color: #39453e;
+}
+
+body.modo-oscuro .producto h3 {
+    color: white;
+}
+
+body.modo-oscuro .producto p {
+    color: #55c58a;
+}
+
+body.modo-oscuro .vista > p {
+    color: #bbb;
+}
+
+body.modo-oscuro .vista h2 {
+    color: white;
+}

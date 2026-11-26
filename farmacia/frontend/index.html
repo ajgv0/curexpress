@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="farmacia">Farmacia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Menú lateral -->
+        <aside class="menu-lateral contraido">
+            <button class="boton-menu" id="botonMenu">
+                ☰
+            </button>
+            <div class="logo">
+                <img src="images/placeholder.jpg" alt="Logo">
+                <h2>Farmacia</h2>
+            </div>
+
+            <nav>
+                <p class="menu-titulo" data-i18n="menuPrincipal">MENÚ PRINCIPAL</p>
+
+                <button class="nav-btn activo" data-vista="inicio" data-i18n="inicio">Inicio</button>
+                <button class="nav-btn" data-vista="productos" data-i18n="productos">Productos</button>
+                <button class="nav-btn" data-vista="carrito" data-i18n="carrito">Carrito</button>
+                <button class="nav-btn" data-vista="favoritos" data-i18n="favoritos">Favoritos</button>
+                <button class="nav-btn" data-vista="membresia" data-i18n="membresia">Membresía</button>
+
+                <p class="menu-titulo" data-i18n="miCuenta">MI CUENTA</p>
+
+                <button class="nav-btn" data-vista="perfil" data-i18n="perfil">Mi perfil</button>
+                <button class="nav-btn" data-vista="historial" data-i18n="historial">Historial de compras</button>
+
+                <p class="menu-titulo" data-i18n="administracion">ADMINISTRACIÓN</p>
+
+                <button class="nav-btn" data-vista="inventario" data-i18n="inventario">Inventario</button>
+                <button class="nav-btn" data-vista="usuarios" data-i18n="usuarios">Administrar usuarios</button>
+
+                <p class="menu-titulo" data-i18n="entregas">ENTREGAS</p>
+
+                <button class="nav-btn" data-vista="rastreo" data-i18n="rastreo">Rastreo</button>
+                <button class="nav-btn" data-vista="repartidor" data-i18n="chatRepartidor">Chat con repartidor</button>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <div class="contenido">
+
+            <header class="barra-superior">
+                <input type="text" placeholder="Buscar medicamentos..." data-i18n-placeholder="buscar">
+
+                <div class="acciones-header">
+                    <button id="botonIdioma" aria-label="Cambiar idioma" data-i18n-aria="cambiarIdioma">ES</button>
+                    <button id="botonTema" aria-label="Cambiar tema" data-i18n-aria="cambiarTema">☾</button>
+                    <button aria-label="Perfil de usuario" data-i18n-aria="perfilUsuario">
+                        <img src="images/profile.jpg" alt="Perfil">
+                    </button>
+                </div>
+            </header>
+
+            <main class="contenido-principal">
+
+                <!-- INICIO -->
+                <section class="vista activa" id="inicio">
+                    <h1 data-i18n="bienvenida">Bienvenido a nuestra farmacia</h1>
+                    <p data-i18n="subBienvenida">Encuentra los productos que necesitas.</p>
+
+                    <h2 data-i18n="destacados">Productos destacados</h2>
+
+                    <div class="productos">
+                        <div class="producto">
+                            <img src="images/placeholder.jpg" alt="Paracetamol">
+                            <h3 data-i18n="paracetamol">Paracetamol</h3>
+                            <p>$35.00</p>
+                            <button data-i18n="agregarCarrito">Agregar al carrito</button>
+                        </div>
+
+                        <div class="producto">
+                            <img src="images/placeholder.jpg" alt="Ibuprofeno">
+                            <h3 data-i18n="ibuprofeno">Ibuprofeno</h3>
+                            <p>$45.00</p>
+                            <button data-i18n="agregarCarrito">Agregar al carrito</button>
+                        </div>
+
+                        <div class="producto">
+                            <img src="images/placeholder.jpg" alt="Loratadina">
+                            <h3 data-i18n="loratadina">Loratadina</h3>
+                            <p>$28.00</p>
+                            <button data-i18n="agregarCarrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RESTO DE PANTALLAS -->
+                <section class="vista" id="productos">
+                    <h1 data-i18n="productos">Productos</h1>
+                    <p data-i18n="textoProductos">Aquí estará el catálogo completo de medicamentos.</p>
+                </section>
+
+                <section class="vista" id="carrito">
+                    <h1 data-i18n="tituloCarrito">Mi carrito</h1>
+                    <p data-i18n="textoCarrito">Aquí aparecerán los productos que agregues.</p>
+                </section>
+
+                <section class="vista" id="favoritos">
+                    <h1 data-i18n="tituloFavoritos">Mis favoritos</h1>
+                    <p data-i18n="textoFavoritos">Aquí estarán tus productos favoritos.</p>
+                </section>
+
+                <section class="vista" id="membresia">
+                    <h1 data-i18n="tituloMembresia">Mi membresía</h1>
+                    <p data-i18n="textoMembresia">Consulta los beneficios y opciones de membresía.</p>
+                </section>
+
+                <section class="vista" id="perfil">
+                    <h1 data-i18n="tituloPerfil">Mi perfil</h1>
+                    <p data-i18n="textoPerfil">Información de tu cuenta y opciones de usuario.</p>
+                </section>
+
+                <section class="vista" id="historial">
+                    <h1 data-i18n="tituloHistorial">Historial de compras</h1>
+                    <p data-i18n="textoHistorial">Aquí aparecerán tus compras anteriores.</p>
+                </section>
+
+                <section class="vista" id="inventario">
+                    <h1 data-i18n="tituloInventario">Inventario</h1>
+                    <p data-i18n="textoInventario">Administración de existencias de productos.</p>
+                </section>
+
+                <section class="vista" id="usuarios">
+                    <h1 data-i18n="tituloUsuarios">Administrar usuarios</h1>
+                    <p data-i18n="textoUsuarios">Gestión de cuentas y permisos.</p>
+                </section>
+
+                <section class="vista" id="rastreo">
+                    <h1 data-i18n="tituloRastreo">Rastreo de pedido</h1>
+                    <p data-i18n="textoPendiente">Función pendiente de desarrollo.</p>
+                </section>
+
+                <section class="vista" id="repartidor">
+                    <h1 data-i18n="tituloRepartidor">Chat con repartidor</h1>
+                    <p data-i18n="textoPendiente">Función pendiente de desarrollo.</p>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
