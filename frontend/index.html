@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CurExpress</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">CUR<span>EXPRESS</span></a>
+      <nav>
+        <a class="active" href="/">Rastreador</a>
+        <a href="/map.html">Mapa</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="panel hero">
+        <p class="eyebrow">Telemetría GPS en tiempo real</p>
+        <h1>Rastrea tu pedido desde cualquier lugar</h1>
+        <p class="lead">
+          CurExpress usa el GPS del celular instalado en el kart para enviar su
+          ubicación a un servidor, y la muestra en un mapa que se actualiza
+          automáticamente.
+        </p>
+
+        <div class="actions">
+          <button id="btn-start" class="btn btn-primary">Iniciar rastreo</button>
+          <button id="btn-stop" class="btn btn-secondary" disabled>
+            Detener rastreo
+          </button>
+        </div>
+        <p id="gps-message" class="hint">
+          Presiona «Iniciar rastreo» para comenzar.
+        </p>
+      </section>
+
+      <section class="status-grid">
+        <article class="panel stat">
+          <span class="label">Servidor</span>
+          <span class="value">
+            <span id="server-dot" class="dot idle"></span>
+            <span id="server-text">Comprobando…</span>
+          </span>
+        </article>
+
+        <article class="panel stat">
+          <span class="label">GPS</span>
+          <span class="value">
+            <span id="gps-dot" class="dot idle"></span>
+            <span id="gps-text">Inactivo</span>
+          </span>
+        </article>
+
+        <article class="panel stat">
+          <span class="label">Rastreo</span>
+          <span class="value">
+            <span id="tracking-dot" class="dot idle"></span>
+            <span id="tracking-text">—</span>
+          </span>
+        </article>
+      </section>
+
+      <section class="panel telemetry readout">
+        <h2>Última lectura del GPS</h2>
+        <dl>
+          <div class="row">
+            <dt>Latitud</dt>
+            <dd id="gps-lat">—</dd>
+          </div>
+          <div class="row">
+            <dt>Longitud</dt>
+            <dd id="gps-lon">—</dd>
+          </div>
+          <div class="row">
+            <dt>Precisión</dt>
+            <dd id="gps-accuracy">—</dd>
+          </div>
+          <div class="row">
+            <dt>Velocidad</dt>
+            <dd id="gps-speed">—</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <script src="/js/status.js"></script>
+    <script src="/js/gps.js"></script>
+  </body>
+</html>
