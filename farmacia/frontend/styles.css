@@ -1,0 +1,157 @@
+
+/* Configuración general */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Barra superior */
+
+.barra-superior {
+    background-color: #198754;
+    padding: 5px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 65px;
+    box-sizing: border-box;
+}
+
+/* Botones del encabezado */
+
+.barra-superior button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Imágenes de los botones */
+
+.barra-superior button img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* Logo izquierdo */
+.barra-superior .boton-icono img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Carrito y perfil */
+.botones-derecha img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Contenido principal */
+
+main {
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* Título */
+
+h1 {
+    color: #198754;
+    font-size: 40px;
+}
+
+/* Barra de búsqueda */
+
+input {
+    width: 350px;
+    max-width: 80%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Adaptación a pantallas pequeñas */
+
+@media (max-width: 600px) {
+
+    .barra-superior {
+        padding: 10px 12px;
+    }
+
+    .barra-superior button img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .botones-derecha {
+        gap: 12px;
+    }
+
+    main {
+        margin-top: 90px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    input {
+        width: 80%;
+    }
+
+}
+
+.catalogo {
+    margin: 60px 40px;
+    text-align: left;
+}
+
+.catalogo h2 {
+    color: #198754;
+    font-size: 28px;
+}
+
+.productos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.producto h3 {
+    margin-bottom: 8px;
+}
+
+.producto p {
+    font-weight: bold;
+    color: #198754;
+}
+
+.producto button {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
