@@ -1,6 +1,6 @@
 # CurExpress
 
-Sistema de rastreo GPS en tiempo real para un kart estilo Mario Kart.
+Sistema de rastreo GPS en tiempo real para un pedido.
 Backend en FastAPI + SQLite, frontend en HTML/CSS/JS con Leaflet, instalable como PWA.
 
 ## Cómo ejecutar (por ahora)
