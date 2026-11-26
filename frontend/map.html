@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CurExpress · Mapa</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">CUR<span>EXPRESS</span></a>
+      <nav>
+        <a href="/">Rastreador</a>
+        <a class="active" href="/map.html">Mapa</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div id="stale-alert" class="alert" hidden>
+        ⚠ Ubicación desactualizada: el servidor no está recibiendo coordenadas.
+      </div>
+
+      <div class="map-layout">
+        <section class="panel map-panel">
+          <div id="map" class="map-canvas"></div>
+        </section>
+
+        <aside class="panel telemetry">
+          <h2>Telemetría</h2>
+          <dl>
+            <div class="row">
+              <dt>Latitud</dt>
+              <dd id="lat">—</dd>
+            </div>
+            <div class="row">
+              <dt>Longitud</dt>
+              <dd id="lon">—</dd>
+            </div>
+            <div class="row">
+              <dt>Precisión GPS</dt>
+              <dd id="accuracy">—</dd>
+            </div>
+            <div class="row">
+              <dt>Velocidad</dt>
+              <dd id="speed">—</dd>
+            </div>
+            <div class="row">
+              <dt>Lectura del GPS</dt>
+              <dd id="reading-age">—</dd>
+            </div>
+            <div class="row">
+              <dt>Última actualización</dt>
+              <dd id="last-update">—</dd>
+            </div>
+            <div class="row">
+              <dt>Rastreo</dt>
+              <dd>
+                <span id="tracking-dot" class="dot idle"></span>
+                <span id="tracking-text">—</span>
+              </dd>
+            </div>
+            <div class="row">
+              <dt>Servidor</dt>
+              <dd>
+                <span id="server-dot" class="dot idle"></span>
+                <span id="server-text">Comprobando…</span>
+              </dd>
+            </div>
+          </dl>
+          <button id="btn-follow" class="btn btn-secondary">Seguir al pedido: sí</button>
+        </aside>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/js/status.js"></script>
+    <script src="/js/map.js"></script>
+  </body>
+</html>
