@@ -210,3 +210,40 @@ body {
         padding: 0 15px;
     }
 }
+
+/* BOTÓN DEL MENÚ */
+
+.boton-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* MENÚ CONTRAÍDO */
+
+.menu-lateral {
+    position: relative;
+    transition: width 0.3s ease, min-width 0.3s ease;
+}
+
+.menu-lateral.contraido {
+    width: 75px;
+    min-width: 75px;
+}
+
+.menu-lateral.contraido .logo h2,
+.menu-lateral.contraido .menu-titulo,
+.menu-lateral.contraido .nav-btn {
+    display: none;
+}
+
+.menu-lateral.contraido .logo {
+    justify-content: center;
+}
+
+.menu-lateral.contraido .logo img {
+    width: 45px;
+}
