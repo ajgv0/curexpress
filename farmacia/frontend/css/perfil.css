@@ -1,0 +1,190 @@
+
+/* ==========================================
+   CONTENEDOR DEL PERFIL
+========================================== */
+
+.perfil-contenido {
+    width: 100%;
+}
+
+.perfil-contenido h1 {
+    margin-bottom: 8px;
+}
+
+.perfil-contenido > p {
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   DISTRIBUCIÓN
+========================================== */
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 2fr);
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.perfil-grid .tarjeta {
+    padding: 25px;
+    border-radius: 12px;
+}
+
+
+/* ==========================================
+   RESUMEN DEL PERFIL
+========================================== */
+
+.perfil-resumen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.perfil-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-resumen h3,
+.perfil-resumen p {
+    margin: 0;
+}
+
+.perfil-accesos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.perfil-accesos button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+#formPerfil fieldset {
+    border: none;
+    padding: 0;
+    min-width: 0;
+}
+
+#formPerfil legend {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo-ancho {
+    grid-column: 1 / -1;
+}
+
+.campo input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#formPerfil h4 {
+    margin: 25px 0 18px;
+}
+
+
+/* ==========================================
+   CONTRASEÑA
+========================================== */
+
+.contenedor-password {
+    display: flex;
+    gap: 8px;
+}
+
+.contenedor-password input {
+    flex: 1;
+    min-width: 0;
+}
+
+.toggle-password {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.perfil-botones {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.perfil-mensaje {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.perfil-mensaje.error {
+    color: #d93025;
+}
+
+.solo-lector {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .perfil-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .campos {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-ancho {
+        grid-column: auto;
+    }
+
+}
