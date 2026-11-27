@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta - CureXpress</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="registro-pagina">
+
+        <div class="registro-barra acciones-header">
+            <button type="button" id="botonIdioma" aria-label="Cambiar idioma" data-i18n-aria="cambiarIdioma">ES</button>
+            <button type="button" id="botonTema" aria-label="Cambiar tema" data-i18n-aria="cambiarTema">☾</button>
+        </div>
+
+        <main class="tarjeta registro-tarjeta">
+            <div class="registro-logo">
+                <img src="images/placeholder.jpg" alt="Logo">
+                <h2>CureXpress</h2>
+            </div>
+
+            <h1 data-i18n="registroTitulo">Crear cuenta</h1>
+            <p class="registro-desc" data-i18n="registroDesc">Regístrate para comprar tus medicamentos y dar seguimiento a tus pedidos.</p>
+
+            <form id="formRegistro" novalidate>
+                <div class="campos">
+                    <label class="campo campo-ancho">
+                        <span data-i18n="regNombre">Nombre completo</span>
+                        <input type="text" name="nombre" maxlength="80" autocomplete="name" required>
+                    </label>
+
+                    <label class="campo campo-ancho">
+                        <span data-i18n="regCorreo">Correo electrónico</span>
+                        <input type="email" name="correo" maxlength="100" autocomplete="email" required>
+                    </label>
+
+                    <label class="campo campo-ancho">
+                        <span data-i18n="regTelefono">Teléfono (10 dígitos)</span>
+                        <input type="tel" name="telefono" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" autocomplete="tel-national">
+                    </label>
+
+                    <label class="campo">
+                        <span data-i18n="regPassword">Contraseña</span>
+                        <div class="contenedor-password">
+                            <input type="password" name="password" id="passwordRegistro" minlength="8" maxlength="50" autocomplete="new-password" required>
+                            <button type="button" class="toggle-password" data-target="passwordRegistro" aria-label="Mostrar contraseña" data-i18n-aria="verPassword">👁</button>
+                        </div>
+                    </label>
+
+                    <label class="campo">
+                        <span data-i18n="regConfirmar">Confirmar contraseña</span>
+                        <div class="contenedor-password">
+                            <input type="password" name="confirmar" id="confirmarRegistro" maxlength="50" autocomplete="new-password" required>
+                            <button type="button" class="toggle-password" data-target="confirmarRegistro" aria-label="Mostrar contraseña" data-i18n-aria="verPassword">👁</button>
+                        </div>
+                    </label>
+                </div>
+
+                <p class="registro-ayuda" data-i18n="regAyudaPassword">Mínimo 8 caracteres.</p>
+
+                <p id="mensajeRegistro" class="perfil-mensaje" role="alert"></p>
+
+                <button type="submit" class="boton registro-enviar" data-i18n="regCrear">Crear cuenta</button>
+            </form>
+
+            <p class="registro-pie">
+                <span data-i18n="regYaTengo">¿Ya tienes cuenta?</span>
+                <a href="index.html" data-i18n="regIrInicio">Ir al inicio</a>
+            </p>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
