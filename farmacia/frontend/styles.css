@@ -299,3 +299,274 @@ body.modo-oscuro .vista > p {
 body.modo-oscuro .vista h2 {
     color: white;
 }
+
+
+/*PERFIL*/
+
+.acciones-header img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 25px;
+    align-items: start;
+    max-width: 1000px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.perfil-resumen {
+    text-align: center;
+}
+
+.perfil-foto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #198754;
+}
+
+.perfil-resumen h3 {
+    margin: 12px 0 4px;
+    overflow-wrap: anywhere;
+}
+
+.perfil-resumen p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.perfil-accesos {
+    margin-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+}
+
+.perfil-accesos button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.perfil-accesos button:hover {
+    background-color: rgba(25, 135, 84, 0.12);
+}
+
+#camposPerfil {
+    border: none;
+    min-width: 0;
+}
+
+#camposPerfil legend,
+#camposPerfil h4 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#camposPerfil h4 {
+    margin-top: 25px;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.campo span {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background-color: white;
+    color: #333;
+    font: inherit;
+    font-size: 14px;
+}
+
+.campo input:disabled,
+#camposPerfil:disabled input {
+    background-color: #f1f3f2;
+    color: #555;
+}
+
+.campo-ancho {
+    grid-column: 1 / -1;
+}
+
+/*botone*/
+.perfil-botones {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.perfil-botones button {
+    min-width: 100px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #198754;
+    color: white;
+    border: 1px solid #198754;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #146c43;
+}
+
+.boton[hidden],
+.perfil-botones button[hidden] {
+    display: none;
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: #198754;
+}
+
+.boton-secundario:hover {
+    color: white;
+    background-color: #146c43;
+}
+
+.boton:focus-within {
+    outline: 3px solid #55c58a;
+}
+
+/* Oculta el selector de archivos sin perder el acceso con teclado */
+
+.solo-lector {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.perfil-mensaje {
+    min-height: 20px;
+    margin: 15px 0 8px;
+    font-size: 14px;
+    color: #198754;
+}
+
+.perfil-mensaje.error {
+    color: #c0392b;
+}
+
+/* MODO OSCURO */
+
+body.modo-oscuro .tarjeta {
+    background-color: #222925;
+    border-color: #39453e;
+}
+
+body.modo-oscuro .perfil-resumen p {
+    color: #bbb;
+}
+
+body.modo-oscuro .perfil-accesos {
+    border-color: #39453e;
+}
+
+body.modo-oscuro .campo input {
+    background-color: #303a34;
+    border-color: #46534a;
+    color: white;
+    color-scheme: dark;
+}
+
+body.modo-oscuro #camposPerfil:disabled input {
+    background-color: #29312c;
+    color: #ccc;
+}
+
+body.modo-oscuro .boton-secundario {
+    color: #55c58a;
+}
+
+body.modo-oscuro .boton-secundario:hover {
+    color: white;
+    background-color: #146c43;
+}
+
+body.modo-oscuro .perfil-mensaje {
+    color: #55c58a;
+}
+
+body.modo-oscuro .perfil-mensaje.error {
+    color: #ff8a80;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .perfil-grid,
+    .campos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* CONTRASEÑA */
+
+.contenedor-password {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contenedor-password input {
+    flex: 1;
+    min-width: 0;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    padding: 0 8px;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+}
